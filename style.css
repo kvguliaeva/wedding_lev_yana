@@ -643,18 +643,27 @@ body {
   background: #b60019;
 }
 
-.sm-footer .sm-footer__names {
-  margin: 18px auto 26px;
-  color: var(--clr-base);
-  font-family: var(--title-font-family);
-  font-size: clamp(58px, 12vw, 108px);
-  line-height: 0.9;
-  letter-spacing: -0.07em;
-  text-transform: uppercase;
+.sm-footer .sm-signature {
+  margin-top: 24px;
 }
 
-.sm-footer .sm-signature {
-  margin-top: 22px;
+.sm-footer .sm-footer__image {
+  width: min(520px, calc(100vw - 44px));
+  margin: 0 auto 34px;
+}
+
+.sm-footer .sm-footer__image .sm-img {
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.sm-footer .sm-footer__image .sm-img img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: initial;
+  object-position: center top;
 }
 
 .toast {
@@ -902,10 +911,6 @@ body {
   .sm-submit {
     height: 44px;
     font-size: 16px;
-  }
-
-  .sm-footer .sm-footer__names {
-    font-size: 54px;
   }
 
   .sm-fixed-confirm {
