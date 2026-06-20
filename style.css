@@ -276,8 +276,10 @@ body {
 }
 
 .sm-location,
+.sm-ticket,
 .sm-timing,
 .sm-dresscode,
+.sm-contacts,
 .sm-questionnaire,
 .sm-footer {
   padding: 0;
@@ -285,8 +287,10 @@ body {
 }
 
 .sm-location .sm-container,
+.sm-ticket .sm-container,
 .sm-timing .sm-container,
 .sm-dresscode .sm-container,
+.sm-contacts .sm-container,
 .sm-questionnaire .sm-container,
 .sm-footer .sm-container {
   padding-top: 88px;
@@ -294,26 +298,53 @@ body {
 }
 
 .sm-location .sm-text,
+.sm-ticket .sm-text,
 .sm-timing .sm-text,
 .sm-dresscode .sm-text,
+.sm-contacts .sm-text,
 .sm-footer .sm-text,
 .sm-questionnaire .sm-text {
   line-height: 1.25;
 }
 
 .sm-location .sm-title,
+.sm-ticket .sm-title,
 .sm-timing .sm-title,
 .sm-dresscode .sm-title,
+.sm-contacts .sm-title,
 .sm-questionnaire .sm-title {
   margin-bottom: 20px;
 }
 
 .sm-location .sm-text,
+.sm-ticket .sm-text,
 .sm-dresscode .sm-text,
+.sm-contacts .sm-text,
 .sm-footer .sm-text {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.sm-ticket .sm-container {
+  padding-top: 74px;
+  padding-bottom: 74px;
+}
+
+.sm-ticket .sm-title {
+  color: var(--clr-att);
+  font-size: clamp(42px, 8vw, 78px);
+}
+
+.sm-ticket .sm-text {
+  max-width: 520px;
+  margin-top: 28px;
+  border-top: 2px solid var(--clr-att);
+  border-bottom: 2px solid var(--clr-att);
+  padding: 22px 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 .sm-timing .sm-timing__items {
@@ -405,6 +436,58 @@ body {
 .sm-wishes .sm-title {
   max-width: 100%;
   overflow-wrap: normal;
+}
+
+.sm-contacts .sm-container {
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+
+.sm-contact-list {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  width: min(560px, 100%);
+  margin: 30px auto 0;
+}
+
+.sm-contact-card {
+  width: min(250px, 100%);
+  border-top: 1px solid var(--clr-base);
+  border-bottom: 1px solid var(--clr-base);
+  padding: 22px 10px 20px;
+}
+
+.sm-contact-card h3 {
+  margin: 0 0 12px;
+  color: var(--clr-base);
+  font-family: var(--title-font-family);
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.sm-contact-card a {
+  display: block;
+  margin-top: 8px;
+  color: var(--clr-base);
+  font-family: var(--text-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+
+.sm-contact-card a:last-child {
+  color: var(--clr-att);
+  font-family: var(--title-font-family);
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .sm-music-button {
@@ -711,10 +794,24 @@ body {
   }
 
   .sm-location .sm-container,
+  .sm-ticket .sm-container,
   .sm-timing .sm-container,
-  .sm-dresscode .sm-container {
+  .sm-dresscode .sm-container,
+  .sm-contacts .sm-container {
     padding-top: 70px;
     padding-bottom: 70px;
+  }
+
+  .sm-ticket .sm-title {
+    font-size: 36px;
+  }
+
+  .sm-ticket .sm-text {
+    max-width: 320px;
+    margin-top: 22px;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    font-size: 15px;
   }
 
   .sm-questionnaire .sm-container {
@@ -766,6 +863,16 @@ body {
 
   .sm-wishes .sm-wishes__content-wrap {
     max-width: 310px;
+  }
+
+  .sm-contact-list {
+    display: grid;
+    gap: 18px;
+    width: min(320px, 100%);
+  }
+
+  .sm-contact-card {
+    width: 100%;
   }
 
   .sm-location-photo {
